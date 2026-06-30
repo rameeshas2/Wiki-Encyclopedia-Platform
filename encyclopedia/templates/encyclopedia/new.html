@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}Create New Page{% endblock %}
+
+{% block body %}
+<h1><i class="fa-solid fa-plus"></i> Create New Page</h1>
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="title" placeholder="Title"><br><br>
+    <textarea name="content" rows="10" cols="50" placeholder="Markdown content"></textarea><br><br>
+    <button type="submit" class="btn btn-success">
+        <i class="fa-solid fa-save"></i> Save
+    </button>
+</form>
+
+{% endblock %}

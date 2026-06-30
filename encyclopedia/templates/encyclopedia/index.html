@@ -1,0 +1,20 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+Encyclopedia
+{% endblock %}
+
+{% block body %}
+<h1><i class="fa-solid fa-list"></i> Encyclopedia Entries</h1>
+<ul>
+{% for entry in entries %}
+  <li>
+    <i class="fa-regular fa-file-lines"></i>
+    <a href="{% url 'entry' entry %}">{{ entry }}</a>
+  </li>
+{% endfor %}
+</ul>   
+
+
+
+{% endblock %}
